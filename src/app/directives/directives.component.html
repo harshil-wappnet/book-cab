@@ -42,10 +42,40 @@
     </div>
 </div>
 @if(isActive){
-<div class="container">
+<div class="container part-1">
     <span>This content is only visible if <strong>isActive</strong> is true. This is done using structural
         directives.</span>
     <span>This element/tag will be removed from DOM when <strong>isActive</strong> is false.</span>
     <span>This way it will improve the performance.</span>
 </div>
+}@else{
+<div class="container part-2">
+    <span>This content is only visible if <strong>isActive</strong> is false.</span>
+    <span>This element/tag will be removed from DOM when <strong>isActive</strong> is true.</span>
+    <span>This way it will improve the performance.</span>
+</div>
 }
+
+<div class="container">
+    <h3>Below content is render using for loop.</h3>
+    @for(itr of name; let i = $index; track i){
+    <ul>
+        <li>{{itr}}</li>
+    </ul>
+    }@empty{
+    <span>No elment present in array.</span>
+    }
+</div>
+
+<div class="container d-flex align-items-center justify-content-center flex-column">
+    <h3>Traffic Lights</h3>
+    @for (sec of [0, 1, 2]; track sec) {
+    <div class="rounded-circle mt-3" [ngClass]="{
+                'bg-black': getTrafficLightColor(sec) === 'black',
+                'bg-red': getTrafficLightColor(sec) === 'red',
+                'bg-green': getTrafficLightColor(sec) === 'green',
+                'bg-yellow': getTrafficLightColor(sec) === 'yellow'
+            }">
+    </div>
+    }
+</div>
