@@ -1,11 +1,46 @@
-<nav class="navbar">
-  <div class="navbar-brand">
-      <a href="/">MyApp</a>
+<div class="container-fluid">
+  <div class="row">
+    <!-- Navbar Column -->
+    <div class="col-lg-3 col-md-4 col-sm-12 p-0">
+      <nav class="navbar navbar-expand-md flex-column">
+        <div class="d-flex flex-column align-items-center w-100">
+          <a class="navbar-brand my-3 me-0 text-white" href="/"
+            >Learn Angular</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse w-100 d-flex justify-content-center align-items-center"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav flex-column text-center w-100">
+              <li class="nav-item my-2">
+                <a class="nav-link text-white" href="/directives">Directives</a>
+              </li>
+              <li class="nav-item my-2">
+                <a class="nav-link text-white" href="/login">Login</a>
+              </li>
+              <li class="nav-item my-2">
+                <a class="nav-link text-white" href="/register">Register</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Content Column -->
+    <div class="col-lg-9 col-md-8 col-sm-12 p-4">
+      <router-outlet></router-outlet>
+    </div>
   </div>
-  <div class="navbar-links">
-      <a href="/courses">Courses</a>
-      <a href="/login">Login</a>
-      <a href="/register">Register</a>
-  </div>
-</nav>
-<router-outlet></router-outlet>
+</div>

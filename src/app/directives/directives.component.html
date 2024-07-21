@@ -1,0 +1,51 @@
+<div class="container">
+    <h1>Angular Directives Information</h1>
+    <p>
+        Angular directives are markers on a DOM element (such as an attribute,
+        element name, or CSS class) that tell Angular to attach a specified behavior
+        to that DOM element or even transform the DOM element and its children.
+    </p>
+
+    <h2>Types of Directives:</h2>
+    <ul>
+        <li>
+            <strong>Attribute Directives:</strong> Change the appearance or behavior
+            of an element, component, or another directive.
+        </li>
+        <li>
+            <strong>Structural Directives:</strong> Change the DOM layout by adding
+            and removing DOM elements based on conditions.
+        </li>
+    </ul>
+
+    <h2>Examples:</h2>
+    <p>
+        <strong>ngIf:</strong> A structural directive that conditionally includes or
+        excludes a DOM element based on an expression.
+        <br />
+        <strong>ngClass:</strong> An attribute directive that adds or removes CSS
+        classes based on an expression evaluation.
+    </p>
+
+    <h2>Usage:</h2>
+    <p>
+        You can use directives in Angular templates like this:
+        <br />
+        <!-- <code>&lt;div [ngClass]="{'active': true}"
+      *ngIf="isVisible"&gt;&lt;/div&gt;</code> -->
+    </p>
+</div>
+<div class="container">
+    <h4>Structural Directives</h4>
+    <div class="d-flex justify-content-center align-items-center gap-2">
+        <button class="btn-primary btn" (click)="changeActiveStatus()">{{isActive?"Active":"Inactive"}}</button>
+    </div>
+</div>
+@if(isActive){
+<div class="container">
+    <span>This content is only visible if <strong>isActive</strong> is true. This is done using structural
+        directives.</span>
+    <span>This element/tag will be removed from DOM when <strong>isActive</strong> is false.</span>
+    <span>This way it will improve the performance.</span>
+</div>
+}

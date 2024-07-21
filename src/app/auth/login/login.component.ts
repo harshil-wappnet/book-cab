@@ -2,18 +2,18 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ FormsModule,CommonModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
+  // inputs: ['Username'],
 })
 export class LoginComponent {
   email: string = '';
   password: string = '';
-
+  // Username: any;
   onSubmit() {
     // Here you can handle the form submission,
     // e.g., call an authentication service
