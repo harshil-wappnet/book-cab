@@ -78,4 +78,10 @@
             }">
     </div>
     }
+    <div>
+        <p [ngStyle]="{'background-color': isRed ? 'red' : 'blue', 'color': 'white'}">
+            Here is the {{isRed ? "red" : "blue"}} color background. Click below button to change the background color.
+          </p>
+        <button class="btn btn-primary" (click)="changeColor()">Click Me!</button>
+    </div>
 </div>

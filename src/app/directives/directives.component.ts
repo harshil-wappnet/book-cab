@@ -1,4 +1,4 @@
-import { NgClass } from '@angular/common';
+import { NgClass,NgStyle } from '@angular/common';
 import {
   Component,
   OnInit,
@@ -11,7 +11,7 @@ import {
 @Component({
   selector: 'app-directives',
   standalone: true,
-  imports: [NgClass],
+  imports: [NgClass,NgStyle],
   templateUrl: './directives.component.html',
   styleUrl: './directives.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -22,6 +22,7 @@ export class DirectivesComponent implements OnInit, OnDestroy {
   isVisible: boolean = true;
   timeInSecond: number = 1;
   name: string[] = ['harshil', 'rahul', 'naitik', 'jeet', 'jay'];
+  isRed: boolean = true;
   private timerInterval: any;
   changeActiveStatus() {
     this.isActive = !this.isActive;
@@ -38,6 +39,7 @@ export class DirectivesComponent implements OnInit, OnDestroy {
   }
 
   startTimer() {
+    debugger;
     this.ngZone.runOutsideAngular(() => {
       this.timerInterval = setInterval(() => {
         this.ngZone.run(() => {
@@ -60,5 +62,9 @@ export class DirectivesComponent implements OnInit, OnDestroy {
     if (index === 2 && this.timeInSecond >= 5 && this.timeInSecond < 10)
       return 'green';
     return 'black';
+  }
+
+  changeColor(){
+    this.isRed = !this.isRed;
   }
 }

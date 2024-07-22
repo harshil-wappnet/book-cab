@@ -1,0 +1,33 @@
+<header>
+    <h1>Pipes in Angular</h1>
+</header>
+<div class="container">
+    <section>
+        <h2>What are Pipes?</h2>
+        <p>Pipes are a feature in Angular that allows you to transform data directly in your templates. They are used to format data, such as displaying dates, currencies, or any other data transformations. Pipes are simple functions that accept an input value and return a transformed value.</p>
+    </section>
+
+    <section>
+        <h2>Built-in Pipes</h2>
+        <p>Angular provides several built-in pipes that can be used to transform data in your templates.</p>
+        <h3>Commonly Used Built-in Pipes</h3>
+        <ul>
+            <li><strong>DatePipe</strong>: Formats date values.</li>
+            <li><strong>UpperCasePipe</strong>: Transforms text to uppercase.</li>
+            <li><strong>LowerCasePipe</strong>: Transforms text to lowercase.</li>
+            <li><strong>CurrencyPipe</strong>: Formats numbers as currency.</li>
+            <li><strong>DecimalPipe</strong>: Formats numbers with decimal points.</li>
+            <li><strong>PercentPipe</strong>: Formats numbers as percentages.</li>
+        </ul>
+
+        <h3>Examples of Built-in Pipes</h3>
+        <div class="code">
+            <pre>
+&lt;p&gt;{{ today | date }}&lt;/p&gt;
+&lt;p&gt;{{ 'hello world' | uppercase }}&lt;/p&gt;
+&lt;p&gt;{{ 1234.56 | currency:'USD' }}&lt;/p&gt;
+            </pre>
+        </div>
+        <p>In the above examples, the <code>DatePipe</code> formats the current date, the <code>UpperCasePipe</code> transforms text to uppercase, and the <code>CurrencyPipe</code> formats a number as USD currency.</p>
+    </section>
+</div>
